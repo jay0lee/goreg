@@ -44,7 +44,7 @@ function handleClick() {
 <body>
   <h2>GCP Organization Restriction Extension Generator</h2>
   This website will generate a Google Chrome extension which will restrict your the Google Cloud Platform organizations your browser is allowed to access. It does this by setting the X-Goog-Allowed-Resources header on any requests made to GCP domains. See Google's documentation on <a href="https://cloud.google.com/resource-manager/docs/organization-restrictions/overview">Organization Restrictions</a> for more information on the capability.
-  
+<br><br>
 <form name="exdetails" method="post" onSubmit="handleClick(); return false">
         Name your extension: <input type="text" id="ext_name" name="ext_name"><br>
         List GCP Organizations IDs to allow (number only) :<br>
