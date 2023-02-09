@@ -27,7 +27,7 @@ function handleClick() {
       var raw_header = {"resources": org_ids,
                         "options": "strict"};
       var raw_header_str = JSON.stringify(raw_header);
-      encoded_header = base64.encode(raw_header_str).replace('+', '-').replace('/', '_').replace(/=+$/, '');
+      var encoded_header = Buffer(raw_header_str || '').toString('base64').replace('+', '-').replace('/', '_').replace(/=+$/, '');
       rule.action.requestHeaders.value = encoded_header;
       var zip = new JSZip();
       zip.file("rules1.json", JSON.stringify(rule, null, 2));
