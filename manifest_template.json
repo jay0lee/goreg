@@ -1,0 +1,28 @@
+{
+  "name": "",
+  "version": "",
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules1.json"
+      }
+    ]
+  },
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+      "*://*.google.com/",
+      "*://*.googleapis.com/",
+      "*://*.gcr.io/",
+      "*://*.pkg.dev/",
+      "*://*.cloudfunctions.net/",
+      "*://*.run.app/",
+      "*://*.tunnel.cloudproxy.app/",
+      "*://*.datafusion.googleusercontent.com/"
+  ],
+  "manifest_version": 3
+}
