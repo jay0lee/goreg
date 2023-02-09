@@ -11,8 +11,8 @@ function handleClick() {
     $.getJSON('rule_template.json', function(rule) {
       var ext_name = document.getElementById('ext_name').value;
       var org_ids = document.getElementById('org_ids').value.split('\n');
-      for(let i = 0; i < arr.length; i++) {
-          arr[i] = "organizations/" + arr[i];
+      for(let i = 0; i < org_ids.length; i++) {
+          org_ids[i] = "organizations/" + org_ids[i];
           }
       manifest.name = ext_name;
       var nowd = new Date();
