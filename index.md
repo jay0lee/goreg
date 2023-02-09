@@ -51,16 +51,20 @@ function handleClick() {
         <input name="Submit"  type="submit" value="Generate Extension" />
 </form>
 
-  Quick test for your extension:
-  1. Download and unzip your generated extension.
-  2. <a href="https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked">Install the unpacked extension</a>
-  3. You should now be restricted to using the GCP organizations you allowlisted when generating your extension.
+  <h3>Quick test for your extension</h3>
+  <ol>
+    <li>Download and unzip your generated extension.</li>
+  <li><a href="https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked">Install the unpacked extension</a></li>
+  <li>You should now be restricted to using the GCP organizations you allowlisted when generating your extension.</li>
+  </ol>
   
-  Force installing the extension for users.
-  1. Download the extension and leave it as a .zip file.
-  2. Upload the extension to the <a href="https://chrome.google.com/webstore/devconsole/">Chrome Web Store Developer Dashboard</a>.
-  3. Publish the extension to your domain.
-  4. In the admin console, force install the extension for your users.
-  5. If you need to modify the list of allowlisted GCP organizations, generate a new extension with the list and then upload the new version to the CWS developer dashboard.
+    <h3>Force installing the extension for users.</h3>
+  <ol>
+    <li>Download the extension and leave it as a .zip file.</li>
+    <li>Upload the extension to the <a href="https://chrome.google.com/webstore/devconsole/">Chrome Web Store Developer Dashboard</a>.</li>
+    <li>Publish the extension to your domain.</li>
+    <li>In the admin console, force install the extension for your users.</li>
+    <li>If you need to modify the list of allowlisted GCP organizations, generate a new extension with the list and then upload the new version to the CWS developer dashboard.</li>
+  </ol>
 
 </body>
