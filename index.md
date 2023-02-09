@@ -28,7 +28,7 @@ function handleClick() {
                         "options": "strict"};
       var raw_header_str = JSON.stringify(raw_header);
       var encoded_header = btoa(raw_header_str).replace('+', '-').replace('/', '_').replace(/=+$/, '');
-      rule.action.requestHeaders.value = encoded_header;
+      rule[0].action.requestHeaders[0].value = encoded_header;
       var zip = new JSZip();
       zip.file("rules1.json", JSON.stringify(rule, null, 2));
       zip.file("manifest.json", JSON.stringify(manifest, null, 2));
