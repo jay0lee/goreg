@@ -5,6 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="jszip.min.js"></script>
 <script src="FileSaver.min.js"></script>
+<script src="base64.js"></script>
 <script>
 function handleClick() {
   $.getJSON('manifest_template.json', function(manifest) {
@@ -27,7 +28,7 @@ function handleClick() {
       var raw_header = {"resources": org_ids,
                         "options": "strict"};
       var raw_header_str = JSON.stringify(raw_header);
-      var encoded_header = Buffer(raw_header_str || '').toString('base64').replace('+', '-').replace('/', '_').replace(/=+$/, '');
+      var encoded_header = urlEncode(raw_header_str);
       rule.action.requestHeaders.value = encoded_header;
       var zip = new JSZip();
       zip.file("rules1.json", JSON.stringify(rule, null, 2));
