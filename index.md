@@ -49,8 +49,7 @@ function handleClick() {
 <form name="exdetails" method="post" onSubmit="handleClick(); return false">
         Name your extension: <input type="text" id="ext_name" name="ext_name"><br>
         List GCP Organizations IDs to allow (number only) :<br>
-        <textarea id="org_ids" name="org_ids" rows="25" cols="20"></textarea><br>
-       <input type="radio" id="strict" name="restriction_options" value="strict"><label for="strict">Block all other GCP organizations (strict)</label><br>
+        <textarea id="org_ids" name="org_ids" rows="25" cols="20"></textarea><br><input type="radio" id="strict" name="restriction_options" value="strict"><label for="strict">Block all other GCP organizations (strict)</label><br>
        <input type="radio" id="cloudStorageReadAllowed" name="restriction_options" value="cloudStorageReadAllowed"><label for="cloudStorageReadAllowed">Allow reading Cloud Storage buckets from other organizations (cloudStorageReadAllowed)</label><br>
        <br>
         <input name="Submit"  type="submit" value="Generate Extension" />
