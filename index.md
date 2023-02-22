@@ -11,6 +11,7 @@ function handleClick() {
     $.getJSON('rule_template.json', function(rule) {
       var ext_name = document.getElementById('ext_name').value;
       var org_ids = document.getElementById('org_ids').value.split('\n');
+      var options = document.getElementById('options').value;
       for(let i = 0; i < org_ids.length; i++) {
           org_ids[i] = "organizations/" + org_ids[i];
           }
@@ -25,7 +26,7 @@ function handleClick() {
       var ver_str = `${year}.${month}${dom}.${hour}.${minutes}${seconds}`;
       manifest.version = ver_str;
       var raw_header = {"resources": org_ids,
-                        "options": "strict"};
+                        "options": options};
       var raw_header_str = JSON.stringify(raw_header);
       var encoded_header = btoa(raw_header_str).replace('+', '-').replace('/', '_').replace(/=+$/, '');
       rule[0].action.requestHeaders[0].value = encoded_header;
