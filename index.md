@@ -11,7 +11,7 @@ function handleClick() {
     $.getJSON('rule_template.json', function(rule) {
       var ext_name = document.getElementById('ext_name').value;
       var org_ids = document.getElementById('org_ids').value.split('\n');
-      var options = document.getElementById('options').value;
+      var restriction_options = document.getElementById('restriction_options').value;
       for(let i = 0; i < org_ids.length; i++) {
           org_ids[i] = "organizations/" + org_ids[i];
           }
@@ -50,10 +50,8 @@ function handleClick() {
         Name your extension: <input type="text" id="ext_name" name="ext_name"><br>
         List GCP Organizations IDs to allow (number only) :<br>
         <textarea id="org_ids" name="org_ids" rows="25" cols="20"></textarea><br>
-       <input type="radio" id="strict" name="options" value="strict">
-       <label for="strict">Block all other GCP organizations (strict)</label><br>
-       <input type="radio" id="cloudStorageReadAllowed" name="options" value="cloudStorageReadAllowed">
-       <label for="cloudStorageReadAllowed">Allow reading Cloud Storage buckets from other organizations (cloudStorageReadAllowed)</label><br>
+       <input type="radio" id="strict" name="restriction_options" value="strict"><label for="strict">Block all other GCP organizations (strict)</label><br>
+       <input type="radio" id="cloudStorageReadAllowed" name="restriction_options" value="cloudStorageReadAllowed"><label for="cloudStorageReadAllowed">Allow reading Cloud Storage buckets from other organizations (cloudStorageReadAllowed)</label><br>
        <br>
         <input name="Submit"  type="submit" value="Generate Extension" />
 </form>
