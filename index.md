@@ -48,8 +48,8 @@ function handleClick() {
 <br><br>
 <form name="exdetails" method="post" onSubmit="handleClick(); return false">
         Name your extension: <input type="text" id="ext_name" name="ext_name"><br>
-        List GCP Organizations IDs to allow (number only) :<br>
-        <textarea id="org_ids" name="org_ids" rows="10" cols="20"></textarea><br>
+        List [numeric GCP Organizations IDs](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id) to allow: <br>
+        <textarea id="org_ids" name="org_ids" rows="10" cols="15"></textarea><br>
   <select id="restriction_options" name="restriction_options">
 	<option value="strict" title="strict">strict</option>
 	<option value="cloudStorageReadAllowed" title="cloudStorageReadAllowed">cloudStorageReadAllowed</option>
